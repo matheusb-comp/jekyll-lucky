@@ -1,3 +1,6 @@
+# Github Pages repository name (remove for User Pages)
+basepath: /jekyll-lucky
+
 # collections_dir: collections
 collections:
   comics:
