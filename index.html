@@ -15,6 +15,6 @@ title: Testing Jackyll
     Title: {{ comic.title }}
     Label: {{ comic.label }}
     Path: {{ comic.path }}
-    URL: <a href="{{ comic.url }}">{{ comic.url }}</a>
+    URL: <a href="{{ site.baseurl }}{{ comic.url }}">{{ site.baseurl }}{{ comic.url }}</a>
   </pre>
 {% endfor %}

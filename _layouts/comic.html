@@ -23,7 +23,7 @@ title: Comic
       Title: {{ chapter.title }}
       Label: {{ chapter.label }}
       Path: {{ chapter.path }}
-      URL: <a href="{{ chapter.url }}">{{ chapter.url }}</a>
+      URL: <a href="{{ site.baseurl }}{{ chapter.url }}">{{ site.baseurl }}{{ chapter.url }}</a>
     </pre>
   {% endfor %}
 </div>

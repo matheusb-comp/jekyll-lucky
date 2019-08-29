@@ -1,5 +1,8 @@
+---
+version: 4.0.0
+
 # Github Pages repository name (remove for User Pages)
-basepath: /jekyll-lucky
+baseurl: /jekyll-lucky/
 
 # collections_dir: collections
 collections:
@@ -26,3 +29,9 @@ defaults:
 
 # Loop static_files to make a gallery
 # https://mademistakes.com/notes/static-files/
+
+exclude:
+- ".gitignore"
+- ".jekyll-cache"
+- CNAME
+- README.md
