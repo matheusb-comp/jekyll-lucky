@@ -1,0 +1,25 @@
+# collections_dir: collections
+collections:
+  comics:
+    output: true
+    comics: true
+  chapters:
+    output: true
+    chapters: true
+
+
+defaults:
+  - scope:
+      path: "assets/comics"
+    values:
+      comic: true
+
+# Chapters and Sections with collections
+# https://stackoverflow.com/a/37770419
+
+# Photo gallery with Jackyll
+# http://chrisbreitigan.com/blog/photo-galleries-with-data-files
+# http://garethlewis.io/blog/2016/05/21/building-my-photo-gallery-the-jekyll-way/
+
+# Loop static_files to make a gallery
+# https://mademistakes.com/notes/static-files/

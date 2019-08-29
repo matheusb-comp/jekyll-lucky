@@ -1,0 +1,29 @@
+---
+layout: default
+title: Comic
+---
+<h1>{{ page.label }}</h1>
+
+{{ page.content }}
+
+<hr/>
+
+{% if page.thumb %}
+  <div>
+    Thumbnail
+    <img src="{{ page.thumb }}"/>
+  </div>
+{% endif %}
+
+{% assign chapters = site.chapters | where: "comic", page.identifier %}
+<div>
+  Chapters:
+  {% for chapter in chapters %}
+    <pre>
+      Title: {{ chapter.title }}
+      Label: {{ chapter.label }}
+      Path: {{ chapter.path }}
+      URL: <a href="{{ chapter.url }}">{{ chapter.url }}</a>
+    </pre>
+  {% endfor %}
+</div>

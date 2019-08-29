@@ -1,0 +1,21 @@
+---
+layout: default
+title: Chapter
+---
+{%
+  assign collection = site.collections |
+  where: "label", page.collection |
+  first
+%}
+
+<h1>{{ page.label }}</h1>
+
+{{ page.content }}
+
+<hr/>
+
+{% for f in collection.files %}
+  {% if f.path contains page.folder %}
+    <img src="{{ f.name }}"/>
+  {% endif %}
+{% endfor %}
