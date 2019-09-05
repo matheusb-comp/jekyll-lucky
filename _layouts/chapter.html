@@ -12,9 +12,20 @@ title: Chapter
 
 {{ page.content }}
 
+<pre>{{ page | inspect }}</pre>
+
 <hr/>
 
+<pre>{{ collection | inspect }}</pre>
+<hr/>
+
+{% for d in collection.docs %}
+  <pre>{{ d | inspect }}</pre>
+{% endfor %}
+
 {% for f in collection.files %}
+  <pre>{{ f | inspect }}</pre>
+
   {% if f.path contains page.folder %}
     <img src="{{ f.name }}"/>
   {% endif %}

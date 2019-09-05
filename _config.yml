@@ -1,9 +1,6 @@
 ---
 version: 4.0.0
 
-# Github Pages repository name (remove for User Pages)
-baseurl: /jekyll-lucky/
-
 # collections_dir: collections
 collections:
   comics:
@@ -19,6 +16,10 @@ defaults:
       path: "assets/comics"
     values:
       comic: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Chapters and Sections with collections
 # https://stackoverflow.com/a/37770419
