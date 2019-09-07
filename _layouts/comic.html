@@ -6,6 +6,8 @@ title: Comic
 
 {{ page.content }}
 
+Back: <a href="{{ site.url | relative_url }}">{{ site.url | relative_url }}</a>
+
 <hr/>
 
 {% if page.thumb %}
@@ -15,15 +17,16 @@ title: Comic
   </div>
 {% endif %}
 
-{% assign chapters = site.chapters | where: "comic", page.identifier %}
+{% assign chapters = site.collections | where: "label", page.identifier | first %}
 <div>
   Chapters:
-  {% for chapter in chapters %}
+  {% for c in chapters.docs %}
     <pre>
-      Title: {{ chapter.title }}
-      Label: {{ chapter.label }}
-      Path: {{ chapter.path }}
-      URL: <a href="{{ chapter.url | relative_url }}">{{ chapter.url | relative_url }}</a>
+      Number: {{ c.number }}
+      Title: {{ c.title }}
+      Label: {{ c.label }}
+      Path: {{ c.path }}
+      URL: <a href="{{ c.url | relative_url }}">{{ c.url | relative_url }}</a>
     </pre>
   {% endfor %}
 </div>

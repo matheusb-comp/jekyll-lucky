@@ -1,15 +1,17 @@
 ---
 version: 4.0.0
 
-# collections_dir: collections
+collections_dir: collections
 collections:
   comics:
     output: true
-    comics: true
-  chapters:
+    sort_by: number
+  test:
     output: true
-    chapters: true
-
+    sort_by: number
+  another:
+    output: true
+    sort_by: number
 
 defaults:
   - scope:

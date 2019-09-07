@@ -12,16 +12,38 @@ title: Chapter
 
 {{ page.content }}
 
-<pre>{{ page | inspect }}</pre>
+<hr />
 
-<hr/>
+Home: <a href="{{ site.url | relative_url }}">{{ site.url | relative_url }}</a>
 
-<pre>{{ collection | inspect }}</pre>
-<hr/>
+{% assign comic = site.comics | where: "identifier", collection.label | first %}
+{% if comic %}
+  <pre>Comic: {{ comic.label }}</pre>
+  <a href="{{ comic.url | relative_url }}">{{ comic.url | relative_url }}</a>
+{% endif %}
 
 {% for d in collection.docs %}
-  <pre>{{ d | inspect }}</pre>
+  <pre>{{ d.label }}</pre>
+  <a href="{{ d.url | relative_url }}">{{ d.url | relative_url }}</a>
 {% endfor %}
+
+<hr />
+
+Navigation:
+
+{% if page.previous %}
+<a href="{{ page.previous | relative_url }}">
+  <button>&lt;</button>
+</a>
+</button>
+{% endif %}
+
+{% if page.next %}
+<a href="{{ page.next | relative_url }}">
+  <button>&gt;</button>
+</a>
+</button>
+{% endif %}
 
 {% for f in collection.files %}
   <pre>{{ f | inspect }}</pre>

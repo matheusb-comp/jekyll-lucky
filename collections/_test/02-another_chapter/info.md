@@ -1,6 +1,6 @@
 ---
 layout: chapter
-comic: test
+number: 1
 folder: 02-another_chapter
 
 label: Another Chapter

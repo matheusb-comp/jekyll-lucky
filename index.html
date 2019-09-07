@@ -7,11 +7,11 @@ title: Testing Jackyll
 {% for comic in site.comics %}
   {% if comic.thumb %}
     <div>
-      Thumbnail
-      <img src="comics/{{ comic.thumb }}"/>
+      <img src="comics/{{ comic.thumb }}" />
     </div>
   {% endif %}
   <pre>
+    Number: {{ comic.number }}
     Title: {{ comic.title }}
     Label: {{ comic.label }}
     Path: {{ comic.path }}
